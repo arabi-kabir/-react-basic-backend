@@ -15,8 +15,7 @@ class CourseController extends Controller
         return Course::all();
     }
 
-    public function onSelectDetails(Request $request) {
-        return $request;
-        return Course::findOrFail($request->id);
+    public function onSelectDetails($courseId) {
+        return Course::findOrFail($courseId);
     }
 }

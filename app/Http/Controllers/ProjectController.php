@@ -15,7 +15,7 @@ class ProjectController extends Controller
         return Projects::limit(3)->get();
     }
 
-    public function onSelectDetail(Request $request) {
-        return Projects::findOrFail($request->id);
+    public function onSelectDetail($projectId) {
+        return Projects::findOrFail($projectId);
     }
 }

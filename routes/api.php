@@ -22,13 +22,13 @@ Route::middleware(['cors'])->group(function () {
     Route::post('/contact-send', [ContactController::class, 'onContactSend']);
     Route::get ('/course-home', [CourseController::class, 'onSelectFour']);
     Route::get ('/course-all', [CourseController::class, 'onSelectAll']);
-    Route::post('/course-details', [CourseController::class, 'onSelectDetails']);
+    Route::get('/course-details/{courseId}', [CourseController::class, 'onSelectDetails']);
     Route::get ('/footer', [FooterController::class, 'onSelect']);
     Route::get ('/information', [InformationController::class, 'onSelect']);
     Route::get ('/service', [ServiceController::class, 'onSelect']);
     Route::get ('/projects', [ProjectController::class, 'onSelectAll']);
     Route::get ('/projects-3', [ProjectController::class, 'onSelect3']);
-    Route::post('/projects-details', [ProjectController::class, 'onSelectDetail']);
+    Route::get ('/projects-details/{projectId}', [ProjectController::class, 'onSelectDetail']);
     Route::get ('/video-home', [HomeEtcController::class, 'onSelect']);
     Route::get ('/total-project-client', [HomeEtcController::class, 'onSelectToTalProjectClient']);
     Route::get ('/tech-description', [HomeEtcController::class, 'onSelectTechDescription']);
